@@ -1,0 +1,13 @@
+command: ["python", "backend/server.py"]
+env:
+  - name: "SERVING_ENDPOINT"
+    valueFrom: "serving-endpoint"
+  - name: "GEMINI_API_KEY"
+    value: "AIzaSyALw3I3WlWgtjN87nJaYGkMWfE8bBOsUh0"
+  - name: "SQL_WAREHOUSE_ID"
+    value: "2086b6113a0b5faf"
+  - name: "DATABRICKS_HOST"
+    value: "https://dbc-2a619a88-b174.cloud.databricks.com"
+resources:
+  requirements:
+    - backend/requirements.txt

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sahayak - Aura Finance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#494bd6",
+                        "on-secondary-container": "#00311f",
+                        "tertiary-fixed-dim": "#ffb2b7",
+                        "surface-container-low": "#181b25",
+                        "inverse-surface": "#dfe2ef",
+                        "primary-container": "#4446d2",
+                        "on-secondary-fixed": "#002113",
+                        "tertiary-fixed": "#ffdadb",
+                        "surface-container-high": "#262a34",
+                        "surface-bright": "#353943",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "secondary-container": "#00a572",
+                        "on-surface-variant": "#c5c5d4",
+                        "on-tertiary-fixed-variant": "#92002a",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-tint": "#c0c1ff",
+                        "secondary": "#4edea3",
+                        "tertiary": "#ffb2b7",
+                        "outline-variant": "#454652",
+                        "surface-dim": "#0f131c",
+                        "surface-container-highest": "#31353f",
+                        "on-primary": "#1000a9",
+                        "surface": "#0f131c",
+                        "on-surface": "#dfe2ef",
+                        "on-secondary": "#003824",
+                        "secondary-fixed-dim": "#4edea3",
+                        "tertiary-container": "#b60237",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary-container": "#ceceff",
+                        "inverse-on-surface": "#2c303a",
+                        "background": "#0f131c",
+                        "primary-fixed": "#e1e0ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#31353f",
+                        "on-primary-fixed": "#07006c",
+                        "on-tertiary-fixed": "#40000d",
+                        "on-tertiary-container": "#ffc3c6",
+                        "outline": "#8f909e",
+                        "on-background": "#dfe2ef",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0a0e17",
+                        "primary": "#c0c1ff",
+                        "surface-container": "#1c1f29",
+                        "on-tertiary": "#67001b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0e17;
+            color: #dfe2ef;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(28, 31, 41, 0.4);
+            backdrop-filter: blur(24px);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .aura-glow {
+            background: radial-gradient(circle at center, rgba(68, 70, 210, 0.15) 0%, transparent 70%);
+        }
+        .mic-glow {
+            box-shadow: 0 0 30px rgba(68, 70, 210, 0.6);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest min-h-screen flex flex-col">
+<!-- Top Navigation Anchor (TopAppBar) -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white shadow-[0_0_15px_rgba(68,70,210,0.5)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+<span class="text-2xl font-bold text-[#DFE2EF] font-manrope tracking-tight">Aura Finance</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#C5C5D4] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-[#C5C5D4] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full border border-outline-variant/20 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling young woman with professional attire against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBht11jhibHq9iB4DQcPlEmAkqD2hcvDSAAhoNRmJNgb8XmVNQpWZSnfG9_DsCXT7caUBcUBPXBs8BElkzaX2mDy594Yo-lgQBgFICoB7WLBUfzjNpe0ffbdnH6MF0rrBSWfIG1mINpb1_sVmGOEABx2wzMKpFhz0Bc26rH2jeDI7_J0EAzsGOQTuOU520rvUxNdEFmuykDfGGYLBQCzRT_8Tu2ghUOozU7oZqxIy8R-mplKPRYkmID-U3_SnjxBH7T5Rd9OD6VQdI"/>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-28 pb-40 px-6 max-w-5xl mx-auto w-full relative">
+<!-- Atmospheric Ambient Glow -->
+<div class="fixed top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] aura-glow rounded-full pointer-events-none"></div>
+<!-- Greeting Section -->
+<section class="mb-12 relative z-10">
+<div class="flex flex-col gap-1">
+<h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Namaste, Lakshmi.</h1>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="text-label-md text-on-surface-variant font-medium uppercase tracking-widest">Trust Score</span>
+<span class="text-2xl font-bold text-secondary">88</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="text-label-md text-on-surface-variant font-medium uppercase tracking-widest">Balance</span>
+<span class="text-2xl font-bold text-on-surface">₹12,500</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Grid Section (Editorial Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+<!-- UPI-Khata -->
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between h-64 group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container-high/50">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">UPI-Khata</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Instant nano-loans linked to your daily transaction history.</p>
+</div>
+</div>
+<!-- Subsidy Matcher -->
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between h-64 group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container-high/50">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">arrow_outward</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Subsidy Matcher</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Personalized government schemes based on your profile and eligibility.</p>
+</div>
+</div>
+<!-- Visual Claims -->
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between h-64 group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container-high/50">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">camera</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary transition-colors">arrow_outward</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Visual Claims</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">File insurance claims instantly using camera-based damage assessment.</p>
+</div>
+</div>
+<!-- Community Trust -->
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between h-64 group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container-high/50">
+<div class="flex justify-between items-start">
+<div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Community Trust</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Access SHG group savings and collaborative micro-investments.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Input Hub -->
+<div class="fixed bottom-0 left-0 w-full z-50 pointer-events-none">
+<div class="max-w-xl mx-auto pb-12 px-6 flex flex-col items-center pointer-events-auto">
+<!-- Pulsing Guide Text -->
+<p class="text-on-surface-variant font-manrope text-[10px] uppercase tracking-[0.2em] mb-6 opacity-70 animate-pulse">
+                Tap to speak, or select a service above...
+            </p>
+<!-- Interaction Hub -->
+<div class="flex items-center justify-center gap-8 bg-[#1C1F29]/80 backdrop-blur-2xl px-10 py-6 rounded-full border border-white/10 shadow-[0px_20px_40px_rgba(0,0,0,0.6)]">
+<!-- Keyboard -->
+<button class="w-12 h-12 flex items-center justify-center text-[#C5C5D4] hover:text-white transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">keyboard</span>
+</button>
+<!-- Central Microphone (The Pulse) -->
+<button class="w-20 h-20 flex items-center justify-center bg-[#4446D2] text-white rounded-full scale-110 mic-glow active:scale-95 transition-transform duration-300 relative group">
+<div class="absolute inset-0 rounded-full bg-primary-container animate-ping opacity-20 group-hover:opacity-40"></div>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+<!-- Camera/Attachment -->
+<button class="w-12 h-12 flex items-center justify-center text-[#C5C5D4] hover:text-white transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl">add_a_photo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Background Decoration Images (Subtle Blurs) -->
+<div class="fixed top-0 right-0 -z-10 w-[500px] h-[500px] opacity-20 blur-[100px]">
+<img alt="background glow" class="w-full h-full object-cover rounded-full" data-alt="abstract flowing 3d shapes in deep purple and blue hues with smooth gradients and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1GFDaJ6dMeZuG6dw1lXRfxm4JNUyxDcmGJ5fivBzHdMNeAsOc77V_opA-KT1pucoqbv4kKFQJxx2Z0RtJPqHaJS_DIPOXMPM1StzZKlC2zfxHdMB32U9bUMCVtDa_iwC5dZJ4NoUWc6WHFS6CQ3heepG-Mp5k2dIQxVoG90MNb7b02dm2qD4gmI6jYYjAOxdDIuSbM4P2vvdzn_GUAm5DWe5ciuSt0eJvR3ViMv2ftCPbVP3FNpzfrlduoOASWhNM6_2RcQWj_A"/>
+</div>
+<div class="fixed bottom-0 left-0 -z-10 w-[400px] h-[400px] opacity-10 blur-[100px]">
+<img alt="bottom glow" class="w-full h-full object-cover rounded-full" data-alt="ethereal wisps of green and blue light on a pitch black background resembling digital energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvW_GLGxaqEBe75VGg3bt23kACRwNOvrGqYDNZmN-Tf5prGFLobW6sZ4C4XCUl2MCMZdc7i2UWRSML214lhf3_xr34K33fg1Yz20qriAhttmamwq-c3T5Bf7aWQ-Hg-6sT6hgxR_s8ed9tQWbVhAVxA6sIyRbWosH29o96LwSpZfyEIndN324iO9PxKgWfUr3LuiM9r3aBMKRRePdlIrHHnyWR5zDS0DuyhSqBFbuZ5qFXiBUZJx-dxUPRNHYlTd1Fc-gnjhsRZJY"/>
+</div>
+</body></html>

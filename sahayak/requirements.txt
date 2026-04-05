@@ -1,0 +1,11 @@
+flask
+flask-cors
+langgraph
+langchain
+langchain-community
+mlflow
+databricks-vectorsearch
+requests
+sarvamai
+google-generativeai
+pillow

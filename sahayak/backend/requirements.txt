@@ -1,0 +1,14 @@
+flask
+flask-cors
+langgraph
+langchain
+langchain-community
+mlflow
+databricks-vectorsearch
+databricks-sql-connector
+requests
+sarvamai
+google-generativeai
+pillow
+certifi
+databricks-sql-connector
