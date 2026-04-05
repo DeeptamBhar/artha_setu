@@ -18,7 +18,7 @@ graph TD
     LangGraph -->|Transactions/Data| DB_SQL[Databricks SQL Warehouse]
 ```
 
-*(Note: Ensure you include your actual architecture diagram image here as required by the hackathon: `![Architecture Diagram](./architecture.png)`)*
+![Architecture Diagram](./architecture.jpg)
 
 ## How to Run
 
